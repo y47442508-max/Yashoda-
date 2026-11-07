@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yashodha | Personal Portfolio</title>
+
+    <style>
+
+        /* Basic Page Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f3ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #5b21b6;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        /* Home Section */
+        .home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 8%;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h1 {
+            font-size: 45px;
+            color: #5b21b6;
+            margin-bottom: 10px;
+        }
+
+        .home-text h3 {
+            font-size: 25px;
+            color: #7c3aed;
+            margin-bottom: 15px;
+        }
+
+        .home-text p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        /* Profile Image */
+        .profile img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid #a78bfa;
+            box-shadow: 0 5px 20px #aaa;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #5b21b6;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #7c3aed;
+            transform: scale(1.05);
+        }
+
+        /* Common Section Styling */
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #5b21b6;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Education Section */
+        .education {
+            background-color: #ede9fe;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin: 15px auto;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ddd;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #6d28d9;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: white;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: #ede9fe;
+            color: #5b21b6;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: #f5f3ff;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-box {
+            background-color: white;
+            padding: 25px;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        .project-box h3 {
+            color: #6d28d9;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 17px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 8px;
+            color: #5b21b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #ec4899;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5b21b6;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 34px;
+            }
+
+            .profile img {
+                width: 210px;
+                height: 210px;
+            }
+
+            section h2 {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h2>Yashodha.</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-text">
+            <h3>Hello, Welcome to My Portfolio!</h3>
+
+            <h1>I'm Yashodha</h1>
+
+            <h3>BCA Student</h3>
+
+            <p>
+                I am studying in degree, pursuing BCA 1st year.
+                I am interested in learning new things and
+                developing my knowledge and skills.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <!-- Profile Image Placeholder -->
+        <div class="profile">
+            <img
+                src="https://placehold.co/300x300/a78bfa/ffffff?text=Your+Photo"
+                alt="Yashodha Profile Photo">
+        </div>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Yashodha. I am a BCA first-year
+            degree student. I am passionate about learning
+            new things and improving my knowledge.
+            My hobby is singing. I enjoy exploring new
+            opportunities and developing my skills.
+        </p>
+
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+
+        <h2>My Education</h2>
+
+        <div class="card">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>1st Year Degree Student</p>
+
+            <p>College: Add Your College Name</p>
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+
+        <h2>My Skills & Interests</h2>
+
+        <div class="skill-list">
+
+            <div class="skill">HTML Basics</div>
+
+            <div class="skill">CSS Basics</div>
+
+            <div class="skill">Communication</div>
+
+            <div class="skill">Learning</div>
+
+            <div class="skill">Singing</div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-box">
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    Created a personal portfolio website
+                    using HTML and CSS.
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h3>Learning Projects</h3>
+
+                <p>
+                    Exploring web development and
+                    learning basic programming concepts.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p><b>Name:</b> Yashodha</p>
+
+        <p><b>Email:</b> yashu@gamil.com</p>
+
+        <p><b>Location:</b> Tumkur</p>
+
+        <p><b>Hobby:</b> Singing</p>
+
+        <a href="mailto:yashu@gamil.com" class="btn">
+            Send Me an Email
+        </a>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+
+            <p>Connect With Me</p>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+                Facebook
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Yashodha | Personal Portfolio</p>
+
+        <p>Designed with HTML & CSS</p>
+
+    </footer>
+
+</body>
+</html>
